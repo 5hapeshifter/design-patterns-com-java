@@ -2,7 +2,10 @@ package strategypattern.imposto.calculos;
 
 import strategypattern.imposto.Produto;
 
-public class CalculoSP implements CalculoImposto {
+/*
+Implementação da interface, cuja qual o contexto(Calculadora) de imposto não sabe como se comporta.
+ */
+public class CalculoSPStrategy implements CalculoImpostoStrategy {
     @Override
     public double calculaImposto(double amount, Produto produto) {
         return amount *= ImpostoPorEstado.SP.getValorDoImposto();
